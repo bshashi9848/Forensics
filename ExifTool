@@ -1,0 +1,52 @@
+ExifTool
+Read and write metadata in files
+
+Forensics
+Description
+ExifTool is a platform-independent tool for reading, writing, and editing metadata in a wide variety of files including images, audio, and video.
+
+Installation / Check
+Check if installed:
+
+which exiftool
+Install command:
+
+sudo apt install libimage-exiftool-perl
+Basic Syntax
+exiftool [options] <file>
+Common Commands
+Command	What it does	When to use	Risk
+exiftool image.jpg
+
+Show all metadata	View image info	
+exiftool -gps* image.jpg
+
+GPS data only	Find location	
+exiftool -all= image.jpg
+
+Remove all metadata	Sanitize image	
+exiftool -r -ext jpg directory/
+
+Recursive on JPGs	Batch processing	
+Step-by-Step Guide
+1
+Run exiftool on file
+2
+Review metadata
+3
+Check GPS for location
+4
+Note camera/device info
+5
+Remove if needed
+Understanding the Output
+Shows all embedded metadata including camera, date, location, and software info.
+
+Important Warnings
+•
+Metadata can reveal sensitive info
+•
+Always check before sharing files
+•
+GPS data can expose location
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
