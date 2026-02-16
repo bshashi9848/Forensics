@@ -1,0 +1,49 @@
+Foremost
+File carving tool
+
+Forensics
+Description
+Foremost is a console program to recover files based on their headers, footers, and internal data structures (file carving).
+
+Installation / Check
+Check if installed:
+
+which foremost
+Install command:
+
+sudo apt install foremost
+Basic Syntax
+foremost -i <input> -o <output>
+Common Commands
+Command	What it does	When to use	Risk
+foremost -i disk.img -o output/
+
+Carve all files	Recover deleted files	
+foremost -t jpg -i disk.img -o output/
+
+JPG only	Specific file type	
+foremost -t pdf,doc -i disk.img -o output/
+
+Multiple types	Documents only	
+Step-by-Step Guide
+1
+Obtain disk image
+2
+Run foremost
+3
+Check output directory
+4
+Review recovered files
+5
+Document findings
+Understanding the Output
+Creates directories with recovered files organized by type.
+
+Important Warnings
+•
+Works on copies only
+•
+May recover partial files
+•
+Output can be large
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
