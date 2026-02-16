@@ -1,0 +1,52 @@
+Steghide
+Steganography tool for hiding data in images
+
+Forensics
+Description
+Steghide is a steganography tool that can hide data within JPEG, BMP, WAV, and AU files. It can also extract hidden data from these files.
+
+Installation / Check
+Check if installed:
+
+which steghide
+Install command:
+
+sudo apt install steghide
+Basic Syntax
+steghide <embed|extract> -sf <file>
+Common Commands
+Command	What it does	When to use	Risk
+steghide embed -cf cover.jpg -ef secret.txt
+
+Hide data in image	Embed secret file in image	
+steghide extract -sf stego.jpg
+
+Extract hidden data	Reveal hidden content	
+steghide info image.jpg
+
+Get info about file	Check if image contains hidden data	
+steghide embed -cf cover.jpg -ef secret.txt -p password
+
+Embed with password	Password-protect hidden data	
+Step-by-Step Guide
+1
+For hiding: prepare cover file and secret
+2
+Run embed command with password
+3
+For extracting: run extract on suspected file
+4
+Enter password if required
+5
+Hidden data extracted to current directory
+Understanding the Output
+Shows embedding capacity, compression ratio, and success/failure. Extract shows filename of extracted data.
+
+Important Warnings
+•
+Steganography is often used maliciously
+•
+Password-protected files need password
+•
+Only works with specific file types
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
