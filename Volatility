@@ -1,0 +1,59 @@
+Volatility
+Memory forensics framework
+
+Forensics
+Description
+Volatility is an advanced memory forensics framework for analyzing RAM dumps. It can extract running processes, network connections, registry hives, and malware artifacts from memory images.
+
+Installation / Check
+Check if installed:
+
+which volatility
+Install command:
+
+sudo apt install volatility
+Basic Syntax
+volatility -f <memory_dump> <plugin>
+Common Commands
+Command	What it does	When to use	Risk
+volatility -f memory.raw imageinfo
+
+Identify profile	First step - determine OS profile	
+volatility -f memory.raw --profile=Win7SP1x64 pslist
+
+List processes	See running processes	
+volatility -f memory.raw --profile=Win7SP1x64 netscan
+
+Network connections	Find network activity	
+volatility -f memory.raw --profile=Win7SP1x64 hashdump
+
+Dump hashes	Extract password hashes	
+volatility -f memory.raw --profile=Win7SP1x64 malfind
+
+Find malware	Detect injected code	
+Step-by-Step Guide
+1
+Obtain memory dump
+2
+Run imageinfo to find profile
+3
+List processes with pslist
+4
+Check network with netscan
+5
+Look for malware with malfind
+6
+Extract specific artifacts
+Understanding the Output
+Output shows processes, PIDs, memory addresses, network connections. Each plugin has specific output format.
+
+Important Warnings
+•
+Requires correct profile selection
+•
+Memory analysis is complex
+•
+Some plugins require symbols
+•
+Large dumps need significant RAM
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
