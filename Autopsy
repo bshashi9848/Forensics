@@ -1,0 +1,56 @@
+Autopsy
+Digital forensics platform for disk analysis
+
+Forensics
+Description
+Autopsy is a digital forensics platform with GUI for analyzing hard drives and smartphones. It can recover deleted files, analyze browser history, and extract metadata.
+
+Installation / Check
+Check if installed:
+
+which autopsy
+Install command:
+
+sudo apt install autopsy
+Basic Syntax
+autopsy (GUI application)
+Common Commands
+Command	What it does	When to use	Risk
+autopsy
+
+Launch Autopsy	Starting forensic analysis	
+Create New Case
+
+Start new investigation	Beginning new forensic case	
+Add Data Source
+
+Load disk image	Import evidence for analysis	
+Run Ingest Modules
+
+Analyze data	Extract and categorize evidence	
+Step-by-Step Guide
+1
+Launch Autopsy
+2
+Create new case with details
+3
+Add disk image as data source
+4
+Run ingest modules (hash, keyword, etc.)
+5
+Browse results and timeline
+6
+Generate report
+Understanding the Output
+GUI shows file tree, deleted files, artifacts by category. Timeline view shows activity chronologically.
+
+Important Warnings
+•
+Work on copies, never original evidence
+•
+Maintain chain of custody
+•
+Document all findings
+•
+Large images take time to process
+⚠️ Use Kali Linux tools only on systems you own or have written permission to test. Unauthorized hacking is illegal and can result in criminal charges.
